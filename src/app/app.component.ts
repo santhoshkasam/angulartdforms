@@ -4,10 +4,12 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @ViewChild('f') singupForm: NgForm
+  @ViewChild('f') singupForm: NgForm;
+  defaultValue = 'pet';
+  answer: string;
 
   suggestUserName() {
     const suggestedName = 'Superuser';
@@ -17,7 +19,7 @@ export class AppComponent {
   //   console.log(form);
   // }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.singupForm);
   }
 }
